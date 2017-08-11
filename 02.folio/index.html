@@ -7,15 +7,12 @@
   <title>folio</title>
   <link rel='stylesheet' type='text/css' href='style.css'>
   <link rel='shortcut icon' type='image/ico' href='images/Logo-favicon.ico'>
-  <link rel="stylesheet" href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css">
+   <!-- <link rel="stylesheet" href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css">  -->
   <!-- <link rel='stylesheet' type='text/css' href='webfont.css'> -->
 </head>
 <body>
   <!--  wrapper 시작 -->
   <div class="wrapper">
-    <!-- <img class="mainImage" src="images/main.png" alt="main-image"> -->
-      <!-- main container 시작 -->
-      <div class="mainContainer">
         <!-- header 시작 -->
         <header class="header">
           <h1 class="headerHeading"><a href="#"><img src="images/Logo-white.png" alt="Folio logo"></a></h1>
@@ -24,23 +21,32 @@
           <!-- role : 온톨로지, 스크린리더가 보다 쉽게 찾을 수 있도록 한다. 랜드마크 역활 -->
           <nav class="nav" role="navigation">
             <h2 class="hidden">Main Menu</h2>
-            <ul class="mainMenu">
-              <li class="mainMenuList"><a href="#">Projects</a></li>
-              <li class="mainMenuList"><a href="#">About</a></li>
-              <li class="mainMenuList"><a href="#">Blog</a></li>
-              <li class="mainMenuList"><a href="#">Contact</a></li>
+            <ul class="navMenu">
+              <li class="navMenuList"><a href="#">Projects</a></li>
+              <li class="navMenuList"><a href="#">About</a></li>
+              <li class="navMenuList"><a href="#">Blog</a></li>
+              <li class="navMenuList"><a href="#">Contact</a></li>
             </ul>
+          <!-- burger bar 시작 -->
+            <div class="burggerMenu">
+              <div class="burggerBun burggerBunTop"></div>
+              <div class="burggerBun burggerBunMid"></div>
+              <div class="burggerBun burggerBunBottom"></div>
+            </div>
+          <!-- burger bar 종료 -->
           </nav>
           <!-- nav 종료 -->
         </header>
         <!-- header 종료 -->
+      <!-- main container 시작 -->
+      <div class="mainContainer">
         <!-- main 시작 -->
         <section class="main">
           <h2 class="hidden">Main</h2>
           <!-- aria-hidden : 화면판독기(스크린리더)에 인식됨을 설정할 수 있음 -->
           <!-- false (기본값) : 화면판독기에 인식됨 -->
           <!-- true : 화면판독기에 인식안됨 (의미없는 자료에 사용) -->
-          <p class="mainText"><strong>We define and design purposeful brand experiences across channels.</strong><img src="images/arrow-white.png" alt="arrow-white"></p>
+          <p class="mainText"><strong>We define and design purposeful brand experiences across channels.&#8594;</strong></p>
           <section class="mainList">
             <ul class="brandingList">
               <li class="BrandingHeading">WallyHOME™</li>
@@ -54,30 +60,34 @@
               <li class="packagingHeading">Nike Fuel 360</li>
               <li class="packagingMenu">Packaging</li>
             </ul>
-            </section>
           </section>
-          <!-- main 종료 -->
+        </section>
+        <!-- main 종료 -->
+      </div>
+      <!-- main container 종료 -->
+      <!-- subNav 시작 -->
+      <section class="subHeaderWrapper">
+        <div class="subHeader">
+          <h2 class="subHeading">
+            <a href="#"><img src="images/Logo.png" alt="Folio logo"></a>
+          </h2>
+          <button class="subIoButton" type="button"><a href="#">Showfol.io</a></button>
+          <div class="subNav">
+            <h2 class="hidden">Sub Menu</h2>
+            <ul class="subNavMenu">
+              <li class="subNavMenuList"><a href="#">Projects</a></li>
+              <li class="subNavMenuList"><a href="#">About</a></li>
+              <li class="subNavMenuList"><a href="#">Blog</a></li>
+              <li class="subNavMenuList"><a href="#">Contact</a></li>
+            </ul>
+          </div>
         </div>
-        <!-- main container 종료 -->
-      <!-- navSub 시작 -->
-      <!-- article : 독립적이고 홀로설수 있는 내용 (블로그 글, 포럼 글, 뉴스기사 등 ) -->
-      <section class="navSub">
-        <h2 class="navSubHeading">
-          <a href="#"><img src="images/Logo.png" alt="Folio logo"></a>
-        </h2>
-        <button class="subIoButton" type="button"><a href="#">Showfol.io</a></button>
-        <h2 class="hidden">Sub Menu</h2>
-        <ul class="navSubMenu">
-          <li class="navSubMenuList"><a href="#">Projects</a></li>
-          <li class="navSubMenuList"><a href="#">About</a></li>
-          <li class="navSubMenuList"><a href="#">Blog</a></li>
-          <li class="navSubMenuList"><a href="#">Contact</a></li>
-        </ul>
       </section>
-      <!-- navSub 종료 -->
+      <!-- subNav 종료 -->
       <!-- images Section 시작 -->
       <section class="imagesWrapper">
         <h2 class="hidden">Images List</h2>
+      <!-- article : 독립적이고 홀로설수 있는 내용 (블로그 글, 포럼 글, 뉴스기사 등 ) -->
         <article class="image-box">
           <a href="#">
             <div class="image-img">
@@ -212,37 +222,37 @@
         </article>
       </section>
       <!-- images Section 종료 -->
-      <!-- communi container 시작 -->
-      <div class="communityContainer">
-        <!-- communication 시작 -->
-        <section class="communication">
+      <!-- communityWrapper 시작 -->
+      <div class="communityWrapper">
+        <!-- communityContainer 시작 -->
+        <section class="communityContainer">
           <!-- news 시작 -->
           <article class="news">
             <h2 class="newsHeading">news</h2>
-            <ul class="newsContent">
+            <ul class="newsMainContent">
               <li class="newsContentHeading">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</li>
               <li class="newsContentDate">Tuesday, December 9, 2014</li>
             </ul>
-            <img class="newsArrowWhite" src="images/arrow-white.png" alt="next arrow">
-            <ul class="newsContent">
+            <div class="newsMainArrow">&#8594;</div>
+            <ul class="newsSubContent">
               <li class="newsContentHeading">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</li>
               <li class="newsContentDate">Tuesday, December 9, 2014</li>
             </ul>
-            <img class="newsArrow" src="images/arrow-gray.png" alt="next arrow">
+            <div class="newsSbuArrow">&#8594;</div>
           </article>
           <!-- news 종료 -->
           <!-- Twitter 시작 -->
           <article class="twitter">
             <h2 class="twitterHeading">Twitter</h2>
-            <ul class="twitterContent">
+            <ul class="twitterContent1">
               <li class="twitterContentHeading">Material UI Kit: Navs by <a href="#">@showfol.oi</a> on <a href="#">@dribbble https://dribbble.com/shots/1759197-Material-UI-Kit-Navs …</a></li>
               <li class="twitterContentDate">Friday, December 5, 2014</li>
             </ul>
-            <ul class="twitterContent">
+            <ul class="twitterContent2">
               <li class="twitterContentHeading">Amazing Pixel Art by Pixel, Huh | Abduzeedo Design Inspiration <a href="#">http://abduzeedo.com/amazing-pixel-art-pixel-huh …</a></li>
               <li class="twitterContentDate">Saturday, December 6, 2014</li>
             </ul>
-            <ul class="twitterContent">
+            <ul class="twitterContent3">
               <li class="twitterContentHeading">We've been nominated for UI8 at Awwwards - please vote for us!</br><a href="">http://www.awwwards.com/best-websites/ui8-1 …</a></li>
               <li class="twitterContentDate">Sunday, December 7, 2014</li>
             </ul>
@@ -251,41 +261,45 @@
         </section>
         <!-- communication 종료 -->
       </div>
-      <!-- communi container 종료 -->
+      <!-- community container 종료 -->
       <!-- footer 시작 -->
-      <footer class="footer">
-        <h2 class="footerHeading">
-          <a href="#"><img src="images/Logo-white.png" alt="Folio Logo"></a>
-        </h2>
-        <section class="contacts">
-          <h3 class="contactsHeading">Contacts</h3>
-          <ul class="contactsList">  
-            <li><a href="#">info@showfol.io</a></li>
-            <li>(356) 789-9304</li>
-          </ul>
-        </section>
-        <section class="office">
-          <h3 class="officeHeading">Office</h3>
-          <ul class="officeList">  
-            <li>Showfol.io</li>
-            <li>730 Guerrero St</li>
-            <li>San Francisco, CA 94110</li>
-          </ul>
-        </section>
-        <section class="social">
-          <h3 class="socialHeading">Social</h3>
-          <ul class="socialList">
-            <li class="socialListItem">Behance</li>
-            <li class="socialListItem">Dribbble</li>
-            <li class="socialListItem">Twitter</li>
-            <li class="socialListItem">Instagram</li>
-          </ul>
-        </section>
-      </footer>
-      <!-- footer 종료 -->
+      <div class="footerWrapper">
+        <footer class="footer">
+          <h2 class="footerHeading">
+            <a href="#"><img src="images/Logo-white.png" alt="Folio Logo"></a>
+          </h2>
+          <section class="contacts">
+            <h3 class="contactsHeading">Contacts</h3>
+            <ul class="contactsList">  
+              <li class="contactsListItem"><a href="#">info@showfol.io</a></li>
+              <li class="contactsListItem">(356) 789-9304</li>
+            </ul>
+          </section>
+          <section class="office">
+            <h3 class="officeHeading">Office</h3>
+            <ul class="officeList">  
+              <li class="officeListItem"><a href="#">Showfol.io</a></li>
+              <li class="officeListItem">730 Guerrero St</li>
+              <li class="officeListItem">San Francisco, CA 94110</li>
+            </ul>
+          </section>
+          <section class="social">
+            <h3 class="socialHeading">Social</h3>
+            <ul class="socialList01">
+              <li class="socialListItem"><a href="#">Behance</a></li>
+              <li class="socialListItem"><a href="#">Dribbble</a></li>
+            </ul>
+            <ul class="socialList02">
+              <li class="socialListItem"><a href="#">Twitter</a></li>
+              <li class="socialListItem"><a href="#">Instagram</a></li>
+            </ul>
+          </section>
+        </footer>
+        <!-- footer 종료 -->
+      </div>
+      <!-- footerWrapper 종료 -->
     </div>
     <!--  wrapper 종료 -->
-  <script src="https://use.fontawesome.com/0976302afe.js"></script>
   <script type='text/javascript' src='script.js'></script>
   </body>
 </html>

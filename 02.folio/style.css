@@ -51,22 +51,13 @@ body {
   width: 100%; 
 }
 
-.header {
-
-}
 /* wrapper */
 
 .wrapper {
   width: 100%;
 }
 
-/* css background 사용  */
-/* .mainImage {
-  width: 100%;
-} */
-
-/* main container */
- .mainContainer {
+.header {
   margin: 40px 8.33% 0;
 }
 
@@ -95,19 +86,73 @@ body {
   clear: both;
 }
 
-.mainMenu {
+.navMenu {
   color: rgb(255, 255, 255);
 }
 
-.mainMenuList{
+.navMenuList{
   display: inline-block;
   margin: 0 0 0 60px;
   padding: 0 0 10px; 
   cursor: pointer;
+  font-size: 1em;
 }
 
-.mainMenuList:hover, .ioButton:hover {
+.navMenuList:hover, .ioButton:hover {
   color: rgb(67, 243, 208);
+}
+
+/****************************************
+* burger bar *
+****************************************/
+
+.burggerMenu {
+  border: rgb(255, 255, 255) solid 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  /* 원 크기 */
+  height: 34px;
+  width: 34px;
+  /* 삼선 위치 조절 */
+  padding-left: 5px; 
+  padding-top: 8px; 
+  position: relative;
+  transition: all 0.4s ease;
+  user-select: none;
+  float: right;
+}
+
+.burggerMenu::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.burggerMenu:hover {
+  border: rgb(67, 243, 208) solid 2px;
+  background-color: rgb(67, 243, 208); 
+}
+
+.burggerBun {
+  background: rgb(255, 255, 255);
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.burggerBunTop {
+  height: 2px;
+  top: 0;
+  width: 20px;
+}
+.burggerBunMid {
+  height: 2px;
+  top: 4px;
+  width: 20px;
+}
+.burggerBunBottom {
+  height: 2px;
+  top: 8px;
+  width: 20px;
 }
 
 /* header 종료 */
@@ -118,11 +163,24 @@ body {
 button, nav : padding를 활용하여 클릭범위 확장
 ****************************************/
 
+
+/* main container */
+ .mainContainer {
+  margin: 0 8.33%;
+}
+
 /* main */
 /* 화면의 전체 높이 100% */
+/* header 와 간격 padding, 마진 삭제 현상 발생 */
 .main {
-  margin-top: 15%;
-  margin-bottom: 20%;
+  margin-bottom: 15%;
+  padding-top: 15%;
+}
+
+.main::after {  
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .mainText {
@@ -131,84 +189,93 @@ button, nav : padding를 활용하여 클릭범위 확장
   color: rgb(255, 255, 255);
 }
 
-.mainText > img {
-  margin: 0 0 5px 10px;
-}
-
 .mainList { 
+  margin-top: 12%;
+  text-align: center;
+  /* inline-block 여백 4px 제거 */
+  font-size: 0;
   width: 100%;
-  text-align: left;
-  margin-top: 10%;
-
-}
-
-.mainList::after {
-  content: "";
-  display: block;
-  clear: both;
 }
 
 .brandingList, .interviewedList, .packagingList {
   display: inline-block;
-  padding-top: 3%;
-  padding-right: 25.8%;
+  width: 33.3%;
   border-top: 1px solid rgb(255, 255, 255);
   color: rgb(255, 255, 255);
-  font-size: 80%;
+  font-size: 16px;
+  text-align: left;
+}
+
+.BrandingHeading, .InterviewedHeading, .packagingHeading {
+  margin-top: 10%;
 }
 
 .brandingList:hover,
 .interviewedList:hover,
 .packagingList:hover {
   color: rgb(67, 243, 208);
-  border-top: 1px solid rgb(67, 243, 200);
+  border-top: 1px solid rgb(67, 243, 208);
 }
 
 /* main container 종료 */
 
 /* navSub */
-.navSub {
-  display: inline-block;
-  width: 100%;
+
+.subHeaderWrapper {
+  position: relative;
   background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 50px;
 }
 
- .navSubHeading {
-  display: inline-block;
-  margin-left: 3.54%;
-  margin-top: 0.8%;
+.subHeader {
+  margin: 40px 8.33% 0;
+  line-height: 50px;
+}
+
+ .subHeading {
+  position: absolute;
+  top: 8px;
+  left: 3.54%;
 } 
 
 .subIoButton {
-  display: inline-block;
   background: none;
   color: rgb(34, 35, 36);
   border: none;
-  cursor: pointer;
+  /* cursor: pointer; */
   font-size: 18px;
-  margin-left: 3%;
+  line-height: 50px;
 }
 
-.navSubMenu {
+.subNav {
   float: right;
-  margin-right: 8.33%;
-  color: rgb(34, 35, 36);
 }
 
-.navSubMenu::after {
+.subNav::after {
   content: "";
   display: block;
   clear: both;
 }
 
-.navSubMenuList{
-  display: inline-block;
-  margin: 0 0 0 60px;
-  padding: 1em 0 ;; 
-  cursor: pointer;
+.subNavMenu {
+  color: rgb(34, 35, 36);
 }
 
-.navSubMenuList:hover, .ioButton:hover {
+.subNavMenu::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.subNavMenuList{
+  display: inline-block;
+  margin: 0 0 0 60px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.subNavMenuList:hover, .subIoButton:hover {
   color: rgb(67, 243, 208);
 }
 
@@ -238,6 +305,17 @@ position:relative를 사용한다.
 해결) 콘텐츠를 absolute하여 해결한다.
 ****************************************/
 
+.imagesWrapper {
+  background-color: rgb(0, 0, 0);
+}
+
+/* layout 안정장치 */
+.imagesWrapper::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 /* 초기 : 내부 이미지는 왼쪽 상단으로 정렬되어 있음 */
 .image-box {
   float: left;
@@ -246,13 +324,6 @@ position:relative를 사용한다.
   padding-bottom: 25%;
   /* 테두리를 벗어난 요소 숨김 */
    overflow: hidden; 
-}
-
-/* layout 안정장치 */
-.imagesWrapper::after {
-  content: "";
-  display: block;
-  clear: both;
 }
 
 .image-box a {
@@ -329,57 +400,26 @@ position:relative를 사용한다.
 
 /* image box 종료 */
 
-/* media 시작 */
 
- @media screen and (min-width: 1025px) and (max-width: 1920px) {
-
-  .image-box {
-    width: 25%;
-    padding-bottom: 25%;
-  }
-}
-
-@media screen and (min-width: 751px) and (max-width: 1024px) {
-
-  .image-box {
-    width: 33.3%;
-    padding-bottom: 33.3%;
-  }
-  .ioButton, .subIoButton {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 750px) {
-
-  .image-box {
-    width: 50%;
-    padding-bottom: 50%;
-  }
-  .mainMenu, .ioButton, .navSub, .mainList {
-    display: none;
-  }
-} 
-
-/* media 종료 */
+/****************************************
+*communuity Wrapper *
+****************************************/
 
 /* communication */
+.communityWrapper {
+  width: 100%;
+  background-color: rgb(10, 10, 10);  
+}
 
 .communityContainer {
-  width: 100%;
-  background-color: rgb(0, 0, 0);
-}
-
-.communication {
-  margin: 0 8.33% 0; 
+  margin: 0 8.33%;
   color: rgb(255, 255, 255);
 }
-/* .news, .newsHeading, .newsContent,.fa-long-arrow-right {
-  display: inline-block;
-} */
 
+/* news */
 .news {
   position: relative;
+  /* 세로 중앙 정렬 */
   padding: 4.42% 0;
 }
 
@@ -390,14 +430,19 @@ position:relative를 사용한다.
 }
 
 .newsHeading {
-  float: left;
-  margin-right: 3.64%;
+  position: absolute;
 }
 
-.newsContent {
+.newsMainContent {
   display: inline-block;
   width: 32.7%;
-  margin: 0 5% 0 5%;
+  margin: 0 4% 0 12%;
+}
+
+.newsSubContent {
+  display: inline-block;
+  width: 32.7%;
+  margin: 0 3% 0 8%;
 }
 
 .newsContentHeading{
@@ -412,22 +457,27 @@ position:relative를 사용한다.
   margin-top: 3%;
 }
 
-.newsArrowWhite {
+.newsMainArrow {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}  
-
-.newsArrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  font-size: 50px;
+  top: 32%;
+  right: 48.5%;
 }
 
+.newsSbuArrow {
+  position: absolute;
+  font-size: 50px;
+  top: 32%;
+  right: 0%;
+  color: rgb(85, 85, 85);
+}
 
+/* twitter */
 .twitter {
+  position: relative;
+  /* 세로 중앙 정렬 */
   padding: 4.42% 0;
+  /* 위 아래 경계선 */
   border-top: 1px solid rgb(255, 255, 255);
   border-bottom: 1px solid rgb(23, 23, 23);
 }
@@ -439,15 +489,26 @@ position:relative를 사용한다.
 }
 
 .twitterHeading {
-  float: left;
-  margin-right: 3.64%;
+  position: absolute;
 }
 
-.twitterContent {
-  width: 26%;
-  font-size: 12px;
+.twitterContent1, .twitterContent2, .twitterContent3 {
+  width: 25%;
+  font-size: 15px;
+}
+
+.twitterContent1 {
   float: left;
-  margin-left: 2.5%;
+  margin: 0 3% 0 12%;
+}
+
+.twitterContent2 {
+  float: left;
+  margin: 0 2% 0 4%;
+}
+
+.twitterContent3 {
+  float: right;
 }
 
 .twitterContentHeading {
@@ -465,83 +526,289 @@ position:relative를 사용한다.
   margin-top: 3%;
 }
 
-.footer {
-  width: 100%;
+
+/****************************************
+* footer *
+****************************************/
+
+.footerWrapper {
+  position: relative;
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
-  padding: 5% 0;
-  position: relative;
+  padding: 80px 0 30px 0;
 }
 
-.footer::after {
+.footerWrapper::after {
   content: "";
   display: block;
   clear: both;
 }
 
+.footer {
+  margin: 0 8.33%;
+  font-size: 14px;
+  width: 100%;
+}
+
 .footerHeading {
+  position: absolute;
+  top: 75px;
+  left: 3.54%;
+}
+
+.contacts, .office, .social {
   float: left;
-  margin: 0 3.54%;
+  width: 28%;
 }
 
-.contacts {
-  float: left;
-  margin-right: 3%;
-  font-size: 12px;
-  font-weight: 200;
-}
-
-.contactsHeading {
+.contactsHeading, .officeHeading, .socialHeading {
   display: inline-block;
   vertical-align: top;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.contactsList {
-  display: inline-block;
-  margin: 0 85px;
-  color: rgb(85, 85, 85)
-}
-
-.office {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 200;
-}
-
-.officeHeading {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 85px;
-}
-
-.officeList {
-  display: inline-block;
-  color: rgb(85, 85, 85)
-}
-
-.social {
-  float: right;
-  margin: 0 8.33% 0 0;
-  font-size: 12px;
-  font-weight: 200;
-}
-
-.socialHeading {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 85px;
-}
-
-.socialList {
+.contactsList, .officeList, .socialList01, .socialList02 {
   display: inline-block;
   color: rgb(85, 85, 85);
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 24px;
+  margin-left: 20%;
 }
 
-.socialListItem {
-  display: inline-block;
-  margin: 0 20px;
+.contactsListItem:first-child, .socialListItem:first-child {
+  margin-bottom: 22px;
 }
 
-.socialListItem:hover, .officeList:hover, .contactsList:hover {
+.contactsListItem:hover, .officeListItem:hover {
   color: rgb(67, 243, 200);
 }
+
+.socialListItem:hover {
+  color: rgb(277, 80, 135);
+}
+
+
+/****************************************
+*  media 시작*
+****************************************/
+
+
+ @media screen and (min-width: 1025px) and (max-width: 1920px) {
+
+  .image-box {
+    width: 25%;
+    padding-bottom: 25%;
+  }
+   .burggerMenu {
+    display: none;
+  } 
+}
+
+@media screen and (min-width: 751px) and (max-width: 1024px) {
+
+  .image-box {
+    width: 33.3%;
+    padding-bottom: 33.3%;
+  }
+  .ioButton, .subIoButton, .burggerMenu {
+    display: none;
+  }
+
+  /* community */
+    /* news */
+  .newsSubContent, .newsSbuArrow {
+    display: none;
+  }
+  .newsHeading {
+    margin-top: 4%;
+  }
+  .newsMainContent {
+    width: 70%;
+    margin: 4% 5% 4% 18%;
+  }
+  .newsContentHeading {
+    font-size: 20px;
+  }
+  .newsContentDate {
+    font-size: 14px;
+  }
+  .newsMainArrow {
+    right: 0%;
+    color: rgb(85, 85, 85);
+  }
+    /* twitter */
+  .twitterHeading {
+    position: absolute;
+    margin-top: 4%;
+  }
+
+  .twitterContentHeading {
+    font-size: 16px;
+  }
+  .twitterContentDate {
+    font-size: 12px;
+  }
+  .twitterContent1 {
+    margin: 4% 8% 4% 18%;
+    width: 32%;
+  }
+  .twitterContent2 {
+    margin: 4% 5%;
+    width: 32%;
+  }
+  .twitterContent3 {
+    display: none;
+  }
+
+  /* footer */
+  .footerHeading > a > img {
+    width: 18px;
+  }
+  .contacts, .office {
+    width: 38%; 
+  }
+  .contactsList {
+    margin-left: 18%;
+  }
+  .office {
+    margin-left: 8%;
+  }
+  .officeList{
+    margin-left: 18%;
+  }
+  .social {
+    display: block;
+    width: 100%;
+    margin-top: 6%;
+  }
+  .socialList01 {
+    margin-left: 10%;
+    width: 20%;
+  }
+  .socialList02 {
+    margin-left: 0%;
+    width: 20%;
+  }
+  .socialListItem {
+    display: inline-block;
+    margin-right: 14%;
+  }
+}
+
+/* phon */
+@media screen and (max-width: 750px) {
+
+  .mainText {
+    font-size: 30px;
+  }
+  .image-box {
+    width: 50%;
+    padding-bottom: 50%;
+  }
+  .ioButton, .navMenu, .mainList, .subHeaderWrapper {
+    display: none;
+  }
+  .main {
+    margin-bottom: 25%;
+  }
+  /* community */
+    /* news */
+  .newsSubContent, .newsSbuArrow {
+    display: none;
+  }
+  .newsHeading {
+    margin-top: 10%;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .newsMainContent {
+    width: 60%;
+    margin: 10% 5% 10% 20%;
+  }
+  .newsContentHeading {
+    font-size: 14px;
+  }
+  .newsContentDate {
+    font-size: 12px;
+  }
+  .newsMainArrow {
+    right: 0%;
+    color: rgb(85, 85, 85);
+  }
+
+  .twitterHeading {
+    margin-top: 10%;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .twitterContentHeading {
+    font-size: 14px;
+  }
+  .twitterContentDate {
+    font-size: 10px;
+  }
+  .twitterContent1 {
+    margin: 10% 10% 5% 20%;
+    width: 60%;
+  }
+  .twitterContent2 {
+    margin: 5% 10% 10% 20%;
+    width: 60%;
+  }
+  .twitterContent3 {
+    display: none;
+  }
+
+  /* footer */
+  .footerHeading {
+    top: 30px;
+    left: 30px;
+  }
+  .footerHeading > a > img {
+    width: 12px;
+  }
+  .contacts {
+    display: block;
+    width: 100%;
+  }
+  .contactsHeading, .officeHeading, .socialHeading {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 0%;
+  }
+  .contactsList {
+    margin-left: 6%;
+  }
+  .officeList {
+    margin-left: 8%;
+  }
+  .contactsListItem {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .office {
+    width: 100%;
+  }
+  .social {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .socialList01 {
+    margin-left: 8%;
+    width: 24%;
+  }
+  .socialList02 {
+    margin-left: 0%;
+    width: 24%;
+  }
+  .socialListItem {
+    display: inline-block;
+    margin-right: 50px;
+  }
+}
+
+/* media 종료 */
