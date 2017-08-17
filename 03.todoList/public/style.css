@@ -1,0 +1,135 @@
+/* 2017 CSS Mitoo all rights reserved. */
+
+/* 스타일 초기화 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+ /* 숨긴 콘텐츠 */
+.hidden, .skip-nav, legend {
+  position: absolute;
+  left: -9999em;
+}
+
+/* 본문스타일 */
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Spoqa Han Sans', 'Sans-serif';
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 중앙 정렬 */
+
+body {
+  background-image: url(images/img01.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* width: 100%;  */
+  /* height: 100vh; */
+}
+
+.wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.todoHeading {
+  margin: 100px 0 20px;
+  font-size: 100px;
+  font-weight: 300;
+  color: rgba(0, 145, 255, 0.50);
+}
+
+.todoInputGroup {
+  font-size: 0;
+}
+
+.todoLabel {
+  display: none;
+}
+
+.input {
+  position: relative;
+  background: none;
+  padding: 1em 1.2em;
+  font-size: 16px;
+  border: none;
+  border-bottom : 1px solid rgb(85, 172, 238);
+  transition: all 1s ease-in-out;
+}
+
+.input::placeholder {
+  color: rgba(85, 172, 238,0.5);
+  font-weight: 200;
+}
+
+/* .input::after {
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  border-bottom: rgb(67, 243, 200);
+  border-bottom : 1px solid rgb(67, 243, 200);
+}
+
+.input:hover {
+  left: 50%;
+  right: 50%;
+} */
+
+.button, .delete {
+  position: relative;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 18px;
+  background: none;
+  border: none;
+  color: rgb(85, 172, 238);
+  /* box-shadow: 0 2px rgba(200,200,200,0.5); */
+  
+}
+
+.button:active {
+  box-shadow: 0 0px rgba(100,100,100,0.3);
+  transform: translateY(2px);
+}
+
+.todoList {
+  position: relative;
+  width: 20%;
+  margin: 30px auto;
+}
+
+.todoList > li {
+  line-height: 30px;
+  text-align: left;
+  margin-left: 24px;
+}
+
+.delete {
+  position: absolute;
+  left: -10px;
+  padding-right: 100%;
+  line-height: 4px;
+  cursor: pointer;
+}
