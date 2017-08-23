@@ -1,0 +1,61 @@
+/* 2017 CSS Mitoo all rights reserved. */
+
+/* 스타일 초기화 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ /* 숨긴 콘텐츠 */
+.hidden, .skip-nav, legend {
+  position: absolute;
+  left: -9999em;
+}
+
+/* 본문스타일 */
+body {
+  margin: 0;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* head */
+
+.wrapper {
+  margin: 0 10%;
+}
+
+.heading { 
+  text-align: center;
+  margin: 60px 0 30px;
+}
+
+.btn:active {
+  transform: translateY(3px);
+}
+
+.tableGroup {
+  display: none;
+}
+
+.input {
+  width: 100%;
+  background-color: none;
+  padding: 20px;
+  margin: 10px 0;
+}
