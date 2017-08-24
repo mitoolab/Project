@@ -1,0 +1,43 @@
+{
+  "toDoList": [
+    {
+      "task": "치킨은 살 안쪄요",
+      "id": 2
+    },
+    {
+      "task": "피자는 둥그니까 자꾸 먹어 나가자",
+      "id": 3
+    },
+    {
+      "task": "맥주는 장수의 비결",
+      "id": 4
+    }
+  ],
+
+  "books" : [
+    { 
+      "id": 1, 
+      "title": "HTML5", 
+      "author": "Lee", 
+      "price": 2000 
+    },
+    { 
+      "id": 2, 
+      "title": "CSS3", 
+      "author": "Kim", 
+      "price": 3000 
+    },
+    { 
+      "id": 3, 
+      "title": "JavaScript", 
+      "author": "Park", 
+      "price": 5000 
+    },
+    {
+      "id": 4, 
+      "title": "ES6", 
+      "author": "Park", 
+      "price": 5000 
+    }
+  ]
+}

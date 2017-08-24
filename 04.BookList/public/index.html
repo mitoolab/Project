@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+    .add-form, #cancel {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Book List</h4>
+        <div class="table-responsive">
+          <table id="mytable" class="table table-bordred table-striped">
+            <thead>
+              <th><input type="checkbox" id="checkall"></th>
+              <th>#</th>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Price</th>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p>
+          <button id="delete" type="button" class="btn btn-danger">Delete Book</button>
+          <button id="add" type="button" class="btn btn-success">Add Book</button>
+          <button id="cancel" type="button" class="btn btn-warning">Cancel</button>
+        </p>
+        <div class="add-form">
+          <div class="form-group">
+            <input id="title" type="text" class="form-control" placeholder="*Title">
+          </div>
+          <div class="form-group">
+            <input id="author" type="text" class="form-control" placeholder="Author">
+          </div>
+          <div class="form-group">
+            <input id="price" type="text" class="form-control" placeholder="Price">
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+  <script type='text/javascript' src='js/main.js'></script>
+</body>
+</html>
