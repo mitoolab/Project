@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+body {
+  background-color: mediumspringgreen;
+  margin: 20vh 0;
+}
+
+h1, form {
+  text-align: center;
+}
+
+table {
+  margin: 10vh auto;
+}
+
+
+
+
+
+
